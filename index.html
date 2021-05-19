@@ -22,6 +22,10 @@
     <script src="app.controller.js" defer>
     </script>
     <script src="app.routes.js" defer></script>
+    <script src="login/login.controller.js" defer></script>
+    <script src="registration/register.controller.js" defer></script>
+    <script src="registration/tierSelector.controller.js" defer></script>
+    <script src="startview/watchNow.controller.js" defer></script>
 </head>
 <body ng-app="mg" ng-controller="main">
     <nav>
@@ -37,9 +41,11 @@
             <a href="#!movies" ng-class="{ active: isActive('/movies')}">Movies</a>
         </div>
         <div class="sideNavLinks">
-            <a href="#!login" ng-class="{ active: isActive('/login')}">Login</a>
-            <a href="#!register" ng-class="{ active: isActive('/register')}">Register</a>
+            <a href="#!login" ng-class="{ active: isActive('/login')}" ng-show="loggedOut()">Login</a>
+            <a href="#!register" ng-class="{ active: isActive('/register')}" ng-show="loggedOut()">Register</a>
+            <a ng-click="logOut()" ng-show="!loggedOut()">LogOut</a>
         </div>
+        
     </div>    
         <div class="toggleBtnContainer">
             <label for="navToggle">

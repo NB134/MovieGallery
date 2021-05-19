@@ -60,6 +60,7 @@ nav a{
 nav a:hover{
     /* background-color: rgba(240, 248, 255, 0.411); */
     color:#e64f89;
+    cursor: pointer;
 }
 .active{
     color: #e64f89 !important;
@@ -115,7 +116,7 @@ nav>div{
 }
 .btnGroup>a,.formbtnGroup >input{
     padding: 0.5em 1em;
-    background-color: #edf1fd;
+    background:none;
     color: #e64f89;
     transition: all 0.3s ease-in-out;
 }
@@ -236,6 +237,74 @@ fieldset i{
 .formContainer{
     background-color: rgba(255, 255, 255, 0.445);
 }
+
+/* Tier Selector */
+.TiersContainer{
+    padding:1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif; 
+    height:100%;
+    gap:1em;
+    flex-wrap: wrap;
+}
+.Tier{
+    display: flex;
+    min-height:500px;
+    flex:1;
+    padding: 0.5em 2em;
+    height:auto;
+    gap:1em;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    background-color: #9196ae;
+    font-size: 1.3em;
+    color: #edf1fd;
+    box-shadow: 0 0 0.5em 0em rgba(0, 0, 0, 0.233);;
+}
+.Tier>button{
+    border:none;
+    background-color: #e64f89;
+    padding:0.5em 1em;
+    font-size:1.2em;
+    color:white;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.Tier>button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 0.4em 0.1em rgba(0, 0, 0, 0.233);;
+}
+
+/* Watch Now View */
+
+.watchNowContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    font-size:1.5em;
+}
+.watchNowContainer>p{
+    min-width:288px;
+    text-align: center;
+    width:80%;
+}
+.watchNowContainer>h1{
+    text-align:center;
+}
+.watchNowContainer>button{
+    padding:0.5em 1em;
+    font-size:1.5em;
+    background-color: #e64f89;
+    color:white;
+    border:none;
+    cursor: pointer;
+}
 /* media queries */
 @media screen and (max-width:830px) {
     .line {
@@ -289,4 +358,8 @@ fieldset i{
         display: none !important;
     }
         
+    /* watch now controller */
+    .watchNowContainer{
+        font-size:1.2em;
+    }
 }

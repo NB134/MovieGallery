@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMovieGallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-messages.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.js"
+      integrity="sha512-C92rntF0G0YH9kHzQlpux7ADvyKgyUwBqusewsHs/0ibOTNuHxFyVqDkI0BIcLGyP76fxgLOpMOLO6kmHCS/xA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7550a607e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.controller.js" defer>
+    </script>
+    <script src="app.routes.js" defer></script>
+</head>
+<body ng-app="mg" ng-controller="main">
+    <nav>
+        <input type="checkbox" id="navToggle" ng-model="navToggle"><ion-icon name="menu-outline"></ion-icon></input>
+        <div class="logoContainer">
+        <a href="#/!">My Movie Gallery</a>
+        </div>
+   
+    <div class="navLinksContainer">
+        <div class="centralNavLinks">
+            <a href="#/!" ng-class="{ active: isActive('/')}" >Home</a>
+            <a href="#!tv" ng-class="{ active: isActive('/tv')}">Tv Shows</a>
+            <a href="#!movies" ng-class="{ active: isActive('/movies')}">Movies</a>
+        </div>
+        <div class="sideNavLinks">
+            <a href="#!login" ng-class="{ active: isActive('/login')}">Login</a>
+            <a href="#!register" ng-class="{ active: isActive('/register')}">Register</a>
+        </div>
+    </div>    
+        <div class="toggleBtnContainer">
+            <label for="navToggle">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                  </div>
+            </label>
+        </div>
+    </nav>
+    <div class="view" ng-view onload="checkOnLoad()">
+        
+    </div>
+</body>
+</html>

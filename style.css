@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat:wght@700&family=Rubik:wght@300&display=swap&family=Kanit:wght@500&display=swap');
+/*     
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Caveat', cursive;
+    font-family: 'Rubik', sans-serif; 
+    font-family: 'Kanit', sans-serif;
+*/
+html{
+    height:100%;
+}
+body{
+    background-color: #edf1fd;
+/* background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%); */
+background-size: cover;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+/* Navbar Styling */
+nav{
+    position: relative;
+    display:flex;
+    width:100%;
+    /* min-height: 10vh; */
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Kanit', sans-serif; 
+    
+    text-transform: uppercase;
+    /* background-color: rgba(0, 0, 0, 0.466); */
+}
+nav a{
+    padding:1.3em;
+    color: #9196ae;
+    font-size:1em;
+    transition: background-color 0.3s ease-in-out,
+                color 0.3s ease-in-out; 
+}
+.logoContainer{
+    flex:1;
+}
+
+.logoContainer>a{
+    /* color:#fd013c; */
+    /* color:#325288; */
+    /* color: #51c4d3; */
+    /* color:#126e82; */
+    /* color:#a6b1e1; */
+    color:#e64f89;
+    font-size: 1.5em;
+    padding:1em;
+    position: relative;
+        z-index: 2;
+}
+nav a:hover{
+    /* background-color: rgba(240, 248, 255, 0.411); */
+    color:#e64f89;
+}
+.active{
+    color: #e64f89 !important;
+}
+nav>div{
+    display: flex;
+}
+.toggleBtnContainer{
+    /* display: none; */
+}
+#navToggle{
+    display: none;
+}
+.navLinksContainer{
+    display: flex;
+    justify-content: space-between;
+    flex:2;
+}
+
+/* view styling */
+.view{
+    padding:1em 1em 2em 1em;
+    height:calc(100vh - 100px);
+}
+
+/* HomePage */
+
+.homePage{
+    font-family: 'Rubik', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height:100%;
+}
+
+/* LoggedOut homepage*/
+.lgHome{
+    display: flex;
+    margin:auto;
+    flex-direction: column;
+    align-items: center;
+    gap:2em;
+    max-width: 800px;
+    font-size: 1.3em;
+    text-align: center;
+}
+.btnGroup{
+    display: flex;
+    width:80%;
+    justify-content: space-around;
+    
+}
+.btnGroup>a,.formbtnGroup >input{
+    padding: 0.5em 1em;
+    background-color: #edf1fd;
+    color: #e64f89;
+    transition: all 0.3s ease-in-out;
+}
+.btnGroup>a:hover,.formbtnGroup >input:hover{
+    color:white;
+    background-color: #e64f89;
+    box-shadow: 0 0 0.2em 0em rgba(0, 0, 0, 0.342);
+}
+
+/* Tv Shows and movies view styling */
+
+.mediaContainer{
+    display: flex;
+    font-family: 'Rubik', sans-serif; 
+    padding:1em;
+    height:100%;
+}
+.heading{
+    display: flex;
+    margin:auto;
+    flex-direction: column;
+    align-items: center;
+    gap:2em;
+    max-width: 800px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+/* Login and Register Forms */
+
+.formCardContainer{
+    padding:1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif; 
+    height:100%;
+}
+.formCard{
+    height:auto;
+    min-height: 500px;
+    max-width:800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2em 0em rgba(0, 0, 0, 0.164);
+}
+.formCard .column{
+    min-height: 500px;
+height:100%;
+flex:1;
+padding:2em;
+display: flex;
+flex-direction: column;
+gap:1.5em;
+justify-content: space-around;
+}
+.formSubText{
+    background-color:#e64f89    ;
+    color: #edf1fd;
+    text-align: center;
+}
+.formSubText > .altLinkGroup{
+    width:100%;
+    text-align: center;
+    
+}
+.formSubText > .altLinkGroup >p>a{
+   
+    text-shadow: 0.01em 0.01em 0.1em rgba(0, 0, 0, 0.253);
+    font-weight: bold;
+    color:#ffdfe8;
+   
+}
+
+.formCard .column h1{
+    font-size: 2em;
+}
+.formHeading{
+    color:#e64f89;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    font-size:1.3em;
+}
+form input[type="text"],form input[type="password"]{
+    padding:0.5em;
+    font-size: 0.7em;;
+    border:none;
+    width:100%;
+    background: none;
+    outline:none;
+}
+.formbtnGroup{
+    text-align: center;
+}
+.formbtnGroup >input{
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}
+fieldset{
+    border:none;
+    display: flex;
+    flex:1;
+    font-size:1.2em;
+    padding:0.1em;
+    gap:0.1em;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid #e64f89;
+}
+fieldset i{
+    color:#e64f89;
+}
+.formContainer{
+    background-color: rgba(255, 255, 255, 0.445);
+}
+/* media queries */
+@media screen and (max-width:830px) {
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color:#9196ae;
+        margin: 5px;
+      }
+      .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+      }
+    .navLinksContainer{
+        display: flex;
+        flex-direction: row;
+        gap:0.5em;
+        position: fixed;
+        top:0;
+        width:100%;
+        height:100vh;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: white;
+        /* color: white; */
+        clip-path: circle(0px at 100% -10%);
+        transition: all 1s ease-in-out;
+    }
+    .navLinksContainer>div{
+        padding:0;
+        display: flex;
+        flex-direction: column;
+    }
+    .toggleBtnContainer{
+        display: flex;
+    }
+    #navToggle:checked ~ .navLinksContainer{
+        clip-path: circle(200vh at 100% -10%);
+        }
+    /* #navToggle:checked ~ .logoContainer>a{
+        
+    } */
+    .view{
+        height:100vh;
+    }
+
+    .regColumn,.logColumn{
+        display: none !important;
+    }
+        
+}

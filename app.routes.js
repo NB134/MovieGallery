@@ -1,0 +1,18 @@
+angular.module("mg").config(function($routeProvider){
+    $routeProvider
+    .when("/",{
+        templateUrl:'./startview/startView.template.html',
+    })
+    .when("/login",{
+        templateUrl:'./login/login.template.html'
+    })
+    .when("/register",{
+        templateUrl:'./registration/register.template.html'
+    })
+    .when("/movies",{
+        templateUrl:'./movies/movies.template.html'
+    })
+    .when("/tv",{
+        templateUrl:'./tvShows/tvShows.template.html'
+    })
+})

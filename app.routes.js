@@ -1,7 +1,7 @@
 angular.module("mg").config(function($routeProvider){
     $routeProvider
     .when("/",{
-        templateUrl:'startview/startView.template.html'
+        templateUrl:'startview/startview.template.html'
     })
     .when("/login",{
         templateUrl:'./login/login.template.html',

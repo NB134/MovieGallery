@@ -1,0 +1,32 @@
+<div class="userHome">
+    <div class="section intro">
+        <h1>
+            Welcome to My Movie Gallery,
+        </h1>
+        <h1> <span>{{User.name}}</span></h1>
+        <div>
+        <p>
+            Mollit aliquip duis non proident id reprehenderit non. Est sunt consequat ipsum occaecat tempor velit amet culpa minim et non. Minim velit tempor officia dolore ullamco cupidatat magna in magna commodo non deserunt.
+        </p>
+        <h3>Scroll down to continue</h3>
+    </div>
+    </div>
+    <div class="section browse" id="browse">
+        <h4>
+            Featured
+        </h4>
+        <h1>Now Showing</h1>
+        <div class="mediaCardsContainer">
+            <div class="mediaCard" ng-repeat="x in movies">
+                <img ng-src={{x.imgSrc}}>
+                <div class="des">
+                    <h2>{{x.title}}</h2>
+                    <h5><span>{{x.duration}}</span> | <span>{{x.year}}</span></h5>
+                </div>
+                <button>
+                    View Now
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

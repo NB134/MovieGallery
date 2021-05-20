@@ -43,6 +43,7 @@
         <div class="sideNavLinks">
             <a href="#!login" ng-class="{ active: isActive('/login')}" ng-show="loggedOut()">Login</a>
             <a href="#!register" ng-class="{ active: isActive('/register')}" ng-show="loggedOut()">Register</a>
+            <a href="#!tierSelector" ng-show="!loggedOut()">Membership</a>
             <a ng-click="logOut()" ng-show="!loggedOut()">LogOut</a>
         </div>
         

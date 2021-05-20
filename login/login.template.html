@@ -2,14 +2,16 @@
     <div class="formCard">
     <div class="column formContainer">
         <h1 class="formHeading">Login</h1>
-        <form name="loginForm" id="login" ng-submit="logIn()">
+        <form name="loginForm" id="login" ng-submit="logIn()" novalidate>
             <fieldset>
                 <i class="fas fa-portrait"></i>
-                <input type="text" id="username" placeholder="Username" ng-model="User.username">
+                <input type="text" id="username" name="username" placeholder="Username" ng-model="User.username" required>
+                <span class="validationMsg" ng-show="loginForm.username.$touched && loginForm.username.$invalid">The Username is required.</span>
             </fieldset>
             <fieldset>
                 <i class="fas fa-lock"></i>
-                <input type="password" id="password" placeholder="Password" ng-model="User.password">
+                <input type="password" id="password" name="password" placeholder="Password" ng-model="User.password" required>
+                <span class="validationMsg" ng-show="loginForm.password.$touched && loginForm.password.$invalid">The Password is required.</span>
             </fieldset>
             <div class="formbtnGroup">
                 <input type="submit" value="Login">

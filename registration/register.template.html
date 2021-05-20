@@ -1,32 +1,79 @@
 <div class="formCardContainer">
-    <div class="formCard">
-        <div class="column regColumn formSubText">
-            <h1>Welcome to My Movie Gallery</h1>
-            <p>Nisi esse consequat et ipsum tempor. Aliquip ex irure duis velit in mollit dolor est. Consectetur elit exercitation in magna dolor excepteur nisi proident. Aute ullamco consequat eu sint. Tempor aute enim id laboris Lorem excepteur dolore duis occaecat elit. Adipisicing aliquip qui nulla irure mollit ipsum do non qui non magna veniam do ex.</p>
-            <div class="altLinkGroup">
-                <p>Already a member? <a href="#!login">Log in</a></p>
-            </div>
-        </div>
+  <div class="formCard">
+    <div class="column regColumn formSubText">
+      <h1>Welcome to My Movie Gallery</h1>
+      <p>
+        Nisi esse consequat et ipsum tempor. Aliquip ex irure duis velit in
+        mollit dolor est. Consectetur elit exercitation in magna dolor excepteur
+        nisi proident. Aute ullamco consequat eu sint. Tempor aute enim id
+        laboris Lorem excepteur dolore duis occaecat elit. Adipisicing aliquip
+        qui nulla irure mollit ipsum do non qui non magna veniam do ex.
+      </p>
+      <div class="altLinkGroup">
+        <p>Already a member? <a href="#!login">Log in</a></p>
+      </div>
+    </div>
     <div class="column fromContainer">
-        <h1 class="formHeading">Register</h1>
-        <form name="registerForm" id="register" ng-submit="Register()">
-            <fieldset>
-                <i class="fas fa-user"></i>
-                <input type="text" id="name" placeholder="Name" ng-model="User.name">
-            </fieldset>
-            <fieldset>
-                <i class="fas fa-portrait"></i>
-                <input type="text" id="username" placeholder="Username" ng-model="User.username">
-            </fieldset>
-            <fieldset>
-                <i class="fas fa-lock"></i>
-                <input type="password" id="password" placeholder="Password" ng-model="User.password">
-            </fieldset>
-            <div class="formbtnGroup">
-                <input type="submit" value="Register">
-            </div>
-        </form>
-        
+      <h1 class="formHeading">Register</h1>
+      <form name="registerForm" id="register" ng-submit="Register()" novalidate>
+        <fieldset>
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            ng-model="User.name"
+            required
+          />
+          <span
+            class="validationMsg"
+            ng-show="registerForm.name.$touched && registerForm.name.$invalid"
+            >The Name is required.</span
+          >
+        </fieldset>
+        <fieldset>
+          <i class="fas fa-portrait"></i>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            ng-model="User.username"
+            required
+          />
+          <span
+            class="validationMsg"
+            ng-show="registerForm.username.$touched && registerForm.username.$invalid"
+            >The Username is required.</span
+          >
+        </fieldset>
+        <fieldset>
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            ng-model="User.password"
+            required
+            minlength="3"
+          />
+          <span
+            class="validationMsg"
+            ng-show="registerForm.password.$touched && registerForm.password.$pristine"
+            >The Password is required.</span
+          >
+          <span
+            class="validationMsg"
+            ng-show="registerForm.password.$dirty && registerForm.password.$invalid"
+            >Password length should atleast be 3</span
+          >
+        </fieldset>
+        <div class="formbtnGroup">
+          <input type="submit" value="Register" />
+        </div>
+      </form>
     </div>
-    </div>
+  </div>
 </div>

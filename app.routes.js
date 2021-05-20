@@ -25,4 +25,8 @@ angular.module("mg").config(function($routeProvider){
         templateUrl:'./startview/watchnow.template.html',
         controller:'watchNow'
     })
+    .when("/userHome",{
+        templateUrl:'./startview/Uhome.template.html',
+        controller:'watchNow'
+    });
 })

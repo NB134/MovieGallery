@@ -1,4 +1,4 @@
-let app=angular.module("mg",["ngRoute"]);
+let app=angular.module("mg",["ngRoute","ngMaterial"]);
 
 app.factory("UserData", function () {
     let self = this;
@@ -15,11 +15,25 @@ app.factory("UserData", function () {
     {
         self.loggedUser=index;
     }
+    self.media;
+    self.setMedia=function(media)
+    {
+      self.media=media;
+      console.log(self.media, media);
+    }
+    self.getMedia=function()
+    {
+      console.log("getMediaCalled");
+      return self.media;
+    }
     return {
       reset: self.reset,
       data: self.data,
       getloggedUser:self.getloggedUser,
-      setloggedUser:self.setloggedUser
+      setloggedUser:self.setloggedUser,
+      // media:self.media,
+      getMedia:self.getMedia,
+      setMedia:self.setMedia
     };
   });
 

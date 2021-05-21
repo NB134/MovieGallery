@@ -1,0 +1,14 @@
+<div class="detailsContainer column">
+    <h1>
+        {{media.title}}
+    </h1>
+    <h3><span><i class="fas fa-film"></i> {{media.genre}}</span><span><i class="fas fa-hourglass-start"></i> {{media.duration}}</span></h3>
+    <h2>{{media.desc}}</h2>
+    <div class="cast">
+        <h4 ng-repeat="x in media.cast">{{x}}</h4>
+    </div>
+</div>
+<div class="posterContainer column">
+    <img ng-src="{{media.imgSrc}}">
+    <p>Img COntiaer</p>
+</div>

@@ -43,7 +43,8 @@
    
     <div class="navLinksContainer">
         <div class="centralNavLinks">
-            <a href="#/!" ng-class="{ active: isActive('/')}" >Home</a>
+            <a href="#/!" ng-class="{ active: isActive('/')}" ng-show="loggedOut()">Home</a>
+            <a href="#!userHome" ng-class="{ active: isActive('/userHome')}" ng-show="!loggedOut()">Home</a>
             <a href="#!tv" ng-class="{ active: isActive('/tv')}">Tv Shows</a>
             <a href="#!movies" ng-class="{ active: isActive('/movies')}">Movies</a>
         </div>
